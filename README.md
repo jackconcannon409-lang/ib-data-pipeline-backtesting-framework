@@ -80,7 +80,7 @@ plot_backtest(df, trades)
   - Trade list with PnL
 ### AAPL Strategy Backtest Result
 
-![Backtest Plot](images/visualisation_plot_output.png)
+![Backtest Plot](images/visualisation_plot_output_AAPL.png)
 
 - Green markers → executed entries  
 - Red markers → executed exits  
