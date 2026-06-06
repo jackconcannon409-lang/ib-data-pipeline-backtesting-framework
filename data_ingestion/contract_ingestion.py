@@ -161,7 +161,7 @@ def ingest_contract(
                 logging.info("Max request limit reached — stopping.")
                 break
 
-        # getting rid of duplicates within bathes
+        # getting rid of duplicates within data chunks
         df = df.sort_values("date")
         df = df.drop_duplicates(subset=["conId", "date"], keep="last")
 
