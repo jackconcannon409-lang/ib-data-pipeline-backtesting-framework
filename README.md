@@ -73,10 +73,17 @@ df, trades = run_backtest(df)
 plot_backtest(df, trades)
 ```
 ---
-
 ## Example Output
-
 - Backtest produces:
   - Equity curve
   - Entry/exit points
   - Trade list with PnL
+### AAPL Strategy Backtest Result
+
+![Backtest Plot](images/visualisation_plot_output.png)
+
+- Green markers → executed entries  
+- Red markers → executed exits  
+- Blue line → price action  
+
+
