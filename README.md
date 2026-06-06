@@ -1,5 +1,8 @@
 # ib-data-pipeline
+
 A Python-based trading research system for ingesting Interactive Brokers historical data, storing it in DuckDB, generating indicators, and running event-driven strategy backtests with visualisation tools.
+
+---
 
 ## Features
 
@@ -15,6 +18,7 @@ A Python-based trading research system for ingesting Interactive Brokers histori
   - Executed trades
   - Equity curve
 
+---
 
 ## Architecture
 
@@ -27,6 +31,7 @@ The system is structured into modular components:
 - research → Backtesting engine
 - visualisation → Plotting and analysis tools
 
+---
 
 ## Workflow
 
@@ -36,6 +41,8 @@ The system is structured into modular components:
 4. Run event-driven backtest
 5. Track positions, equity, and trades
 6. Visualise results interactively
+
+---
 
 ## Example Usage
 
@@ -51,28 +58,3 @@ df = load_data(contract, timeframe="1day")
 df, trades = run_backtest(df)
 
 plot_backtest(df, trades)
-
-
----
-
-## 7. Project structure (simple, not verbose)
-
-```md
-## Project Structure
-
-data_access/
-data_ingestion/
-features/
-strategies/
-research/
-visualisation/
-
-
-## Future Improvements
-
-- Portfolio-level backtesting
-- Transaction cost + slippage modelling
-- Walk-forward optimisation
-- Strategy parameter tuning engine
-- Live trading integration with IB API
-
