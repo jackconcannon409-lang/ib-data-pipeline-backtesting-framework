@@ -8,6 +8,7 @@ A Python-based trading research system for ingesting Interactive Brokers histori
 
 - Interactive Brokers historical data ingestion
 - Local storage using DuckDB
+- Multi-timeframe data support (intraday + daily) via configurable IB settings
 - Modular indicator system (SMA, RSI, Bollinger Bands, etc.)
 - Strategy signal generation framework
 - Event-driven backtesting engine
@@ -44,6 +45,18 @@ The system is structured into modular components:
 
 ---
 
+## Configuration
+
+The system is centralised through a `config.py` file which controls:
+
+- Interactive Brokers connection settings (host, port, client ID)
+- Data request parameters (bar size, duration, RTH settings)
+- Supported timeframes (1min → 1day)
+- Request batching limits for IB API
+- Project directory paths
+
+---
+
 ## Example Usage
 
 ```python
@@ -58,3 +71,12 @@ df = load_data(contract, timeframe="1day")
 df, trades = run_backtest(df)
 
 plot_backtest(df, trades)
+```
+---
+
+## Example Output
+
+- Backtest produces:
+  - Equity curve
+  - Entry/exit points
+  - Trade list with PnL
